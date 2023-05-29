@@ -1,11 +1,11 @@
 # Flask Python setup
 
 Docker-Compose Flask Python project:
-python3.8
-alpine3.10
-uvicorn
-gunicorn
-fastapi
+- python3.11
+- slim0.95
+- fastapi
+- uvicorn
+- gunicorn
 
 The project has a pre-configured Jinja2 template setup and a build custom API-wrapper (with requests lib) 
 
@@ -32,11 +32,15 @@ You can run unit tests
 python -m unittest
 ```
 
+```
+git tag -a python3.11-slim-fastapi0.95 -m "python3.11 slim fastapi0.95" 
+git push origin main --tags
+```
 
 ## Custom API wrapper
 
 The API wrapper is expecting envvars to be set 
-  - HOSTNAME=http://localhost:8080
-  - REDIRECT_URI=http://localhost:8080
+  - HOSTNAME=http://localhost:8000
+  - REDIRECT_URI=http://localhost:8000
   - CLIENT_ID=CLIENT_ID
   - CLIENT_SECRET=CLIENT_SECRET

@@ -1,6 +1,4 @@
-FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8-alpine3.10-2020-04-27
-
-RUN apk add build-base python-dev py-pip jpeg-dev zlib-dev
+FROM tiangolo/uvicorn-gunicorn:python3.11-slim
 
 WORKDIR /app
 COPY app/requirements.txt ./
